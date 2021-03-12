@@ -1,15 +1,17 @@
-import Document, { Html, Main } from 'next/document';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+import React from 'react';
 
 export default class MyDocument extends Document {
     render() {
         return (
             <Html >
-                <head>
+                <Head>
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;500;700&display=swap" rel="stylesheet" />
-                </head>
+                </Head>
                 <body>
                     <Main />
+                    <NextScript />
                 </body>
             </Html>
         );

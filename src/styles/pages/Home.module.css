@@ -1,0 +1,45 @@
+.container {
+  min-height: 100vh;
+  
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: .75fr 4.75fr .5fr;
+  grid-template-areas: "top top top" 
+                       "botA botB botC"
+                       "foo foo foo";
+}
+
+.navbar {
+  grid-area: top;
+  width: 100%;
+  background: var(--nav-bar);
+}
+
+.filters {
+  grid-area: botA;
+  border-right: 1px solid var(--nav-bar);
+  border-left: 10px solid var(--nav-bar);
+}
+
+.mealsList {
+  grid-area: botB;
+
+  display: flex;
+  justify-content: center;
+}
+
+.mealsList h2 {
+  color: var(--half-black);
+  padding-top: 5px;
+}
+
+.search {
+  grid-area: botC;
+  border-left: 1px solid var(--nav-bar);
+  border-right: 10px solid var(--nav-bar);
+}
+
+.container footer {
+  grid-area: foo;
+  background: var(--nav-bar);
+}
