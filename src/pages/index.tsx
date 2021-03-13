@@ -1,22 +1,24 @@
-import React, { useContext } from 'react';
-import MealDetailsModal from '../components/MealDetailsModal';
-import {MealDetailsModalContext} from '../contexts/MealDetailsModalContext';
+import React from 'react';
+import Filters from '../components/Filters';
+import MealList from '../components/MealList';
+import Meal from '../components/Meal';
 
 import styles from '../styles/pages/Home.module.css';
 
 export default function Home() {
-  const { isModalOpen } = useContext(MealDetailsModalContext)
 
   return (
     <div className={styles.container}>
-      { isModalOpen && <MealDetailsModal /> }
       <nav className={styles.navbar}></nav>
-      <aside className={styles.filters}></aside>
+      <aside className={styles.filters}>
+        <Filters />
+      </aside>
       <section className={styles.mealsList}>
-        <h2>Meals Selection</h2>
-        <div></div>
+        <Meal/>
       </section>
-      <section className={styles.search}></section>
+      <section className={styles.search}>
+        <MealList />
+      </section>
       <footer></footer>
     </div>
   )

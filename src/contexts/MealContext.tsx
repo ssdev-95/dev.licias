@@ -1,7 +1,7 @@
 import { createContext, useState, ReactNode } from "react";
 
 interface MealContextData {
-    meals: MealData[];
+    meal: MealData;
     createMeal: (params: MealData) => void
 }
 
@@ -17,15 +17,15 @@ interface MealData {
 export const MealContext = createContext({} as MealContextData)
 
 export function MealContextProvider ({children }: MealContextProps) {
-    const [meals, setMeals] = useState([])
+    const [meal, setMeal] = useState(null)
 
     const createMeal = (meal: MealData) => {
-        setMeals([...meals, meal])
+        setMeal(meal)
     }
 
     return (
         <MealContext.Provider value={{
-            meals,
+            meal,
             createMeal
         }}>
             {children}
