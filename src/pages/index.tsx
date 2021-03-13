@@ -4,6 +4,7 @@ import MealList from '../components/MealList';
 import Meal from '../components/Meal';
 
 import styles from '../styles/pages/Home.module.css';
+import { MealContextProvider } from '../contexts/MealContext';
 
 export default function Home() {
 
@@ -13,9 +14,11 @@ export default function Home() {
       <aside className={styles.filters}>
         <Filters />
       </aside>
+      <MealContextProvider>
       <section className={styles.mealsList}>
         <Meal/>
       </section>
+      </MealContextProvider>
       <section className={styles.search}>
         <MealList />
       </section>

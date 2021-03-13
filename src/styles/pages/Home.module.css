@@ -23,14 +23,6 @@
 
 .mealsList {
   grid-area: botB;
-
-  display: flex;
-  justify-content: center;
-}
-
-.mealsList h2 {
-  color: var(--half-black);
-  padding-top: 5px;
 }
 
 .search {

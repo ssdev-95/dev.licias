@@ -3,6 +3,7 @@ import React from 'react';
 import styles from '../../styles/components/Search.module.css';
 
 export default function Search() {
+
     const submit = event => {
         window.addEventListener('click', () => {
             event.preventDefault()
