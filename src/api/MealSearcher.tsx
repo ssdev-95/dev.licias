@@ -7,10 +7,9 @@ export const filterMeals = async (filter:string, query:string) => {
     console.log(result)
 }
 
-export const searchMeal = async (query:string) => {
-    const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`
+export const searchMeal = async (url:string) => {
     const data = await fetch(url)
     const result = await data.json()
 
-    console.log(result)
+    return result
 }

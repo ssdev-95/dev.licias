@@ -2,7 +2,7 @@ import { createContext, useState, ReactNode } from "react";
 
 interface MealContextData {
     meal: MealData;
-    createMeal: (params: MealData) => void
+    createMeal: (params) => void
 }
 
 interface MealContextProps {
@@ -51,8 +51,9 @@ export function MealContextProvider ({children }: MealContextProps) {
     }
     const [meal, setMeal] = useState<MealData>(defaultMeal)
 
-    const createMeal = (meal: MealData) => {
-        setMeal(meal)
+    const createMeal = (meal) => {
+        //setMeal(meal)
+        console.log(meal)
     }
 
     return (
