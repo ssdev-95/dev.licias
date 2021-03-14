@@ -13,6 +13,15 @@
   grid-area: top;
   width: 100%;
   background: var(--nav-bar);
+
+  display: flex;
+  align-items: center;
+}
+
+.navbar img {
+  height: 100px;
+  margin-left: 5rem;
+  padding: .25rem;
 }
 
 .filters {

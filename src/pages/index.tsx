@@ -9,20 +9,22 @@ import { MealContextProvider } from '../contexts/MealContext';
 export default function Home() {
 
   return (
+      <MealContextProvider>
     <div className={styles.container}>
-      <nav className={styles.navbar}></nav>
+      <nav className={styles.navbar}>
+        <img src="icons/food_icon.png" alt="Food icon"/>
+      </nav>
       <aside className={styles.filters}>
         <Filters />
       </aside>
-      <MealContextProvider>
       <section className={styles.mealsList}>
         <Meal/>
       </section>
-      </MealContextProvider>
       <section className={styles.search}>
         <MealList />
       </section>
       <footer></footer>
     </div>
+      </MealContextProvider>
   )
 }

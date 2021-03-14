@@ -1,7 +1,7 @@
 import React, {useEffect, useState, useContext} from 'react';
 import {useForm} from 'react-hook-form';
 
-import { searchMeal } from '../../api/MealSearcher';
+import { formatMeal, searchMeal } from '../../api/MealSearcher';
 import {MealContext} from '../../contexts/MealContext';
 
 import styles from '../../styles/components/Search.module.css';
@@ -9,7 +9,7 @@ import styles from '../../styles/components/Search.module.css';
 export default function Search() {
     const [query, setQuery] = useState('https://www.themealdb.com/api/json/v1/1/search.php?s=carrot_cake')
     const {register, handleSubmit} = useForm()
-    const {meal} = useContext(MealContext)
+    const {createMeal, meal} = useContext(MealContext)
 
     const submit = data => {
         window.addEventListener('click', event => {
@@ -21,7 +21,7 @@ export default function Search() {
 
     useEffect(()=>{
         searchMeal(query).then(res=>{
-            console.log(res.meals[0])
+            createMeal(formatMeal(res.meals[0]))
         })
     }, [query])
 

@@ -52,8 +52,7 @@ export function MealContextProvider ({children }: MealContextProps) {
     const [meal, setMeal] = useState<MealData>(defaultMeal)
 
     const createMeal = (meal) => {
-        //setMeal(meal)
-        console.log(meal)
+        setMeal(meal)
     }
 
     return (

@@ -1,5 +1,5 @@
 
-export type Meal = {
+export default interface Meal {
     idMeal: string;
     strArea: string;
     strCategory: string;
