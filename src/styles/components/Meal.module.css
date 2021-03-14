@@ -4,19 +4,69 @@
     max-height: 79.2vh;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-content: center;
 
     padding: .5rem;
+    overflow-y: auto;
 }
 
 .mealContainer h2 {
-    color: var(--half-black);
+    align-self: center;
+    padding-bottom: 1rem;
 }
 
-.mealContainer img {
-    height: 200px;
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
+.ingredientContainer {
+    display: flex;
+    justify-content: center;
+    gap: .25rem;
+}
+
+.leftside,
+.instructions,
+.ingredients {
+    height: 79.2vh;
+}
+
+.leftside {
+    display: flex;
+    flex-direction: column;
+
+    gap: 1rem;
+    padding-left: .7rem;
+    width: 25.67%;
+}
+
+.leftside a {
+    text-decoration: none;
+    width: 33.33%;
+}
+
+.instructions {
+    width: 50%;
+}
+
+.thumb {
+    height: 100px;
+    width: 110px;
     border-radius: 50%;
+}
+
+.instructions p:last-child {
+    text-align: justify;
+    line-height: 1.45rem;
+}
+
+.instructions p:first-child,
+.ingredients p {
+    font-weight: 500;
+    padding-bottom: .7rem;
+}
+
+.ingredients {
+    padding-left: 4rem;
+}
+
+.ingredients ul {
+    width: 100%;
 }

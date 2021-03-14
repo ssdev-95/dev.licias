@@ -1,10 +1,11 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import { MealContext } from '../../contexts/MealContext';
 
 import styles from '../../styles/components/Meal.module.css';
 
 export default function Meal() {
     const {meal} = useContext(MealContext)
+    const [ingredientList, setIngredientList] = useState([])
 
     const {id, 
         name, 
@@ -15,11 +16,42 @@ export default function Meal() {
         tags, 
         youtubeUrl, 
         ingredients} = meal
+        
+        useEffect(()=>{
+            let ingredientos = []
+            ingredients.map(ingredient=>{
+                if(ingredient.name!=""){
+                    if(ingredient.name!=null){
+                        ingredientos.push(`${ingredient.name}: ${ingredient.measure}`)
+                    }
+                }
+            })
+            setIngredientList(ingredientos)
+        }, [ingredients])
 
     return (
         <div className={styles.mealContainer}>
-            <h2>{name}</h2>
-            <img src={thumb} alt=""/>
+            <h2>{`${id} - ${name}`}</h2>
+            <div className={styles.ingredientContainer}>
+                <div className={styles.leftside}>
+                    <img className={styles.thumb} src={thumb} alt=""/>
+                    <p>{area}</p>
+                    <p>{drinkAlternate}</p>
+                    <p>{tags}</p>
+                    <p>See on <a href={youtubeUrl}>Youtube</a></p>
+                </div>
+                <div className={styles.instructions}>
+                    <p>How to prepare:</p>
+                    <p>{instructions}</p>
+                </div>
+                <div className={styles.ingredients}>
+                    <p>Ingredients</p>
+                    <ul>
+                        {ingredientList.map(ingredient=><li key={ingredient.name}>{ingredient}</li>
+                        )}
+                    </ul>
+                </div>
+            </div>
         </div>
     )
 }
