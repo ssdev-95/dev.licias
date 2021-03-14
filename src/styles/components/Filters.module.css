@@ -8,8 +8,12 @@
     font-weight: 500;
 }
 
+.filtersContainer ul {
+    width: 100%;
+}
+
 .filtersContainer ul li {
-    text-align: center;
+    padding-left: 1rem;
 }
 
 .filtersContainer ul li:hover {
