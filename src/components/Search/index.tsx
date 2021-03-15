@@ -1,29 +1,12 @@
-import React, {useEffect, useState, useContext} from 'react';
+import React, {useContext} from 'react';
+import {SearchContext} from '../../contexts/SearchContext';
 import {useForm} from 'react-hook-form';
-
-import { formatMeal, searchMeal } from '../../api/MealSearcher';
-import {MealContext} from '../../contexts/MealContext';
 
 import styles from '../../styles/components/Search.module.css';
 
 export default function Search() {
-    const [query, setQuery] = useState('https://www.themealdb.com/api/json/v1/1/search.php?s=carrot_cake')
-    const {register, handleSubmit} = useForm()
-    const {createMeal, meal} = useContext(MealContext)
-
-    const submit = data => {
-        window.addEventListener('click', event => {
-            event.preventDefault()
-        })
-
-        setQuery(`https://www.themealdb.com/api/json/v1/1/search.php?s=${data.mealSearcher}`)
-    }
-
-    useEffect(()=>{
-        searchMeal(query).then(res=>{
-            createMeal(formatMeal(res.meals[0]))
-        })
-    }, [query])
+   const {register, handleSubmit} = useForm()
+   const {submit} = useContext(SearchContext)
 
     return (
         <div className={styles.searchContainer}>

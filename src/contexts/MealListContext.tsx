@@ -7,6 +7,7 @@ interface MealListContextProviderProps {
 
 interface MealListContextData {
     mealList: string[];
+    setListUrl: (params:string) => void;
 }
 
 export const MealListContext = createContext({} as MealListContextData)
@@ -23,13 +24,10 @@ export const MealListContextProvider = ({children}: MealListContextProviderProps
         })
     }, [listUrl])
 
-    useEffect(()=>{
-        console.log(mealList)
-    }, [mealList])
-
     return (
         <MealListContext.Provider value={{
-            mealList
+            mealList,
+            setListUrl
         }}>
             {children}
         </MealListContext.Provider>

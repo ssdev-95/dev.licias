@@ -4,12 +4,10 @@ import MealList from '../components/MealList';
 import Meal from '../components/Meal';
 
 import styles from '../styles/pages/Home.module.css';
-import { MealContextProvider } from '../contexts/MealContext';
 
 export default function Home() {
 
   return (
-      <MealContextProvider>
     <div className={styles.container}>
       <nav className={styles.navbar}>
         <img src="icons/food_icon.png" alt="Food icon"/>
@@ -25,6 +23,5 @@ export default function Home() {
       </section>
       <footer></footer>
     </div>
-      </MealContextProvider>
   )
 }

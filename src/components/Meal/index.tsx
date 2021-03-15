@@ -47,7 +47,7 @@ export default function Meal() {
                 <div className={styles.ingredients}>
                     <p>Ingredients</p>
                     <ul>
-                        {ingredientList.map(ingredient=><li key={ingredient.name}>{ingredient}</li>
+                        {ingredientList.map(ingredient=><li key={ingredientList.indexOf(ingredient)}>{ingredient}</li>
                         )}
                     </ul>
                 </div>
