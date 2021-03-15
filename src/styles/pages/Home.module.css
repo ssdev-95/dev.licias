@@ -58,12 +58,27 @@
   border-radius: 8px;
 }
 
+.rotateTop,
+.rotateBot {
+  width: 45px;
+  height: 10px;
+  background: var(--half-black);
+  border-radius: 8px;
+}
+
+.rotateTop {
+  transform: rotate(45deg) translateY(12px);
+}
+
+.rotateBot {
+  transform: rotate(-45deg) translateY(-12px);
+}
+
 @media(max-width: 800px) {
   .container {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: red;
   }
   
   .navbar img {
@@ -86,7 +101,6 @@
     z-index: 999;
     width: 45px;
     height: 45px;
-    background: red;
     position: fixed;
     right: 1rem;
     top: 1rem;

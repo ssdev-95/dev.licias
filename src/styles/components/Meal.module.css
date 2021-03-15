@@ -9,6 +9,7 @@
 
     padding: .5rem;
     overflow-y: auto;
+    color: var(--half-black);
 }
 
 .mealContainer h2 {
