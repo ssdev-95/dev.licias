@@ -45,6 +45,19 @@
   background: var(--nav-bar);
 }
 
+.burger {
+  display: none;
+}
+
+.rectTop,
+.rectMid,
+.rectBot {
+  width: 45px;
+  height: 10px;
+  background: var(--half-white);
+  border-radius: 8px;
+}
+
 @media(max-width: 800px) {
   .container {
     display: flex;
@@ -59,5 +72,23 @@
 
   .container footer {
     display: none;
+  }
+
+  .filters, 
+  .search {
+    border: none;
+  }
+
+  .burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    z-index: 999;
+    width: 45px;
+    height: 45px;
+    background: red;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
   }
 }

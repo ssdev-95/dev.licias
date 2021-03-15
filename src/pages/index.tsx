@@ -6,9 +6,14 @@ import Meal from '../components/Meal';
 import styles from '../styles/pages/Home.module.css';
 
 export default function Home() {
-
+  
   return (
     <div className={styles.container}>
+      <div className={styles.burger}>
+        <div className={styles.rectTop}></div>
+        <div className={styles.rectMid}></div>
+        <div className={styles.rectBot}></div>
+      </div>
       <nav className={styles.navbar}>
         <img src="icons/food_icon.png" alt="Food icon"/>
       </nav>
