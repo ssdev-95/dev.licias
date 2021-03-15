@@ -42,3 +42,9 @@
         /*visibility: hidden;*/
     }
 }
+
+@media(max-width: 720px) {
+    .filtersContainer {
+        width: 42vw;
+    }
+}

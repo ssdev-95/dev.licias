@@ -30,6 +30,11 @@
 }
 
 @media(max-width: 800px) {
+    .searchContainer {
+        flex-direction: column;
+        gap: .75rem;
+    }
+
     .searchContainer input {
         background: var(--half-white);
     }

@@ -43,3 +43,10 @@
         /*visibility: hidden;*/
     }
 }
+
+@media(max-width: 720px) {
+    .mealListContainer {
+        width: 55vw;
+        left: 42vw;
+    }
+}
