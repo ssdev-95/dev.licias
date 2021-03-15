@@ -70,3 +70,33 @@
 .ingredients ul {
     width: 100%;
 }
+
+@media(max-width:800px) {
+    .mealContainer {
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .ingredientContainer {
+        flex-wrap: wrap;
+        gap: .5rem;
+        justify-content: space-between;
+        padding: 0 .35rem;
+    }
+
+    .instructions {
+        width: 60%;
+        height: fit-content;
+    }
+
+    .ingredients {
+        width: 100%;
+        height: fit-content;
+
+        padding-top: 3rem;
+    }
+
+    .leftside {
+        height: fit-content;
+    }
+}

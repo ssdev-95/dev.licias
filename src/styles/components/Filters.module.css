@@ -27,3 +27,18 @@
 
     margin-top: 1rem;
 }
+
+@media(max-width: 800px) {
+    .filtersContainer {
+        height:100%;
+        left: 0;
+        top: 0;
+        position:fixed;
+        background: #f0f2f5;
+
+        overflow-y: scroll;
+        width: 30vw;
+        z-index: 666;
+        /*visibility: hidden;*/
+    }
+}

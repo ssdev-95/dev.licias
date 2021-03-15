@@ -28,3 +28,18 @@
 .mealListContainer ul li:hover {
    color: red;
 }
+
+@media(max-width: 800px) {
+    .mealListContainer {
+        height:100vh;
+        left: 30vw;
+        top: 0;
+        position:fixed;
+        background: #f0f2f5;
+
+        overflow-y: scroll;
+        width: 30vw;
+        z-index: 666;
+        /*visibility: hidden;*/
+    }
+}

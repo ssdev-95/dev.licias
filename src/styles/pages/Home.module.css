@@ -1,5 +1,5 @@
 .container {
-  height: 100%;
+  max-height: 100vh;
   
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
@@ -43,4 +43,21 @@
 .container footer {
   grid-area: foo;
   background: var(--nav-bar);
+}
+
+@media(max-width: 800px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: red;
+  }
+  
+  .navbar img {
+    margin-left: 1.5rem;
+  }
+
+  .container footer {
+    display: none;
+  }
 }

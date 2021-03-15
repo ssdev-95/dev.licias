@@ -28,3 +28,9 @@
     background: var(--side-bar);
     color: #fff;
 }
+
+@media(max-width: 800px) {
+    .searchContainer input {
+        background: var(--half-white);
+    }
+}
