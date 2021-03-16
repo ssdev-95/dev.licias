@@ -14,6 +14,7 @@
 
 .filtersContainer ul li {
     padding-left: 1rem;
+    cursor: pointer;
 }
 
 .filtersContainer ul li:hover {
