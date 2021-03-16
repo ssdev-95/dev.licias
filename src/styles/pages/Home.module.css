@@ -85,8 +85,16 @@
     margin-left: 1.5rem;
   }
 
+  .mealsList {
+    height: 110%;
+  }
+
   .container footer {
-    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
   }
 
   .filters, 
